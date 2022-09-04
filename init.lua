@@ -16,6 +16,7 @@ o.expandtab = true                  -- A tab is 4 spaces... in insert mode
 o.splitbelow = true                 -- Split below when splitting horizontally
 o.splitright = true                 -- Split right when splitting veritcally
 o.ignorecase = true                 -- Ignore case when doing a search
+o.completeopt = {'menu', 'menuone', 'noselect'} -- Behaviour of autocomplete window : show menu for autocomplete and select nothing without user input
 
 require('packer-plugin')
 require('remap/remaps')
