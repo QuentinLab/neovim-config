@@ -1,6 +1,7 @@
 -- Set colorscheme
 
 vim.g.mapleader = " "
+
     
 vim.cmd('colorscheme nordic')
 
