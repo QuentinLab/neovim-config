@@ -94,5 +94,21 @@ return require('packer').startup(function()
             },
         }
 
+        use {
+            'mfussenegger/nvim-dap',
+            event = "BufReadPre",
+            module = { "dap" },
+            wants = { "nvim-dap-virtual-text", "nvim-dap-ui", "nvim-dap-python" },
+            requires = {
+                "theHamsta/nvim-dap-virtual-text",
+                "rcarriga/nvim-dap-ui",
+                "mfussenegger/nvim-dap-python",
+                "nvim-telescope/telescope-dap.nvim",
+            },
+            config = function()
+                require("config/dap_conf").setup()
+            end,
+        }
+
 
 end)
