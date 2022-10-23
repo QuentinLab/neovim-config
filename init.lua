@@ -2,9 +2,6 @@
 
 vim.g.mapleader = " "
 
-    
-vim.cmd('colorscheme nordic')
-
 local o = vim.opt
 
 o.clipboard = 'unnamedplus'         -- Share clipboard with system
@@ -20,6 +17,7 @@ o.splitright = true                 -- Split right when splitting veritcally
 o.ignorecase = true                 -- Ignore case when doing a search
 o.hlsearch = false                  -- Remove automatic highlighting 
 o.completeopt = {'menu', 'menuone', 'noselect'} -- Behaviour of autocomplete window : show menu for autocomplete and select nothing without user input
+o.termguicolors = true
 
 require('packer-plugin')
 require('remap/remaps')

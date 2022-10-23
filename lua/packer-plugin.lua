@@ -3,12 +3,13 @@ return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 
 	-- colorscheme
-	use {
-		'andersevenrud/nordic.nvim',
-		config = function()
-                    require('config/nordic_conf').setup()
-		end
-	}
+        use {
+            'catppuccin/nvim',
+            as = "catpuccin",
+            config = function()
+                require('config/catpuccin_conf').setup()
+            end
+        }
         
         -- Status line in neovim
         use {
@@ -108,6 +109,13 @@ return require('packer').startup(function()
             config = function()
                 require("config/dap_conf").setup()
             end,
+        }
+
+        -- Nice tabs
+        use {
+            'akinsho/bufferline.nvim',
+            requires = 'kyazdani42/nvim-web-devicons',
+            config = require('bufferline').setup{}
         }
 
 
