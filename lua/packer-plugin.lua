@@ -2,14 +2,6 @@ return require('packer').startup(function()
 	-- packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	-- colorscheme
-        use {
-            'catppuccin/nvim',
-            as = "catpuccin",
-            config = function()
-                require('config/catpuccin_conf').setup()
-            end
-        }
         
         -- Status line in neovim
         use {
@@ -18,6 +10,15 @@ return require('packer').startup(function()
                 config = function()
                     require('config/lualine_conf').setup()
                 end
+        }
+	
+        -- colorscheme
+        use {
+            'catppuccin/nvim',
+            as = "catpuccin",
+            config = function()
+                require('config/catpuccin_conf').setup()
+            end
         }
         
         -- Fuzzy finder (find file, search, etc..)
@@ -109,13 +110,6 @@ return require('packer').startup(function()
             config = function()
                 require("config/dap_conf").setup()
             end,
-        }
-
-        -- Nice tabs
-        use {
-            'akinsho/bufferline.nvim',
-            requires = 'kyazdani42/nvim-web-devicons',
-            config = require('bufferline').setup{}
         }
 
 
