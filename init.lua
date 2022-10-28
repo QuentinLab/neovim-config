@@ -18,6 +18,7 @@ o.ignorecase = true                 -- Ignore case when doing a search
 o.hlsearch = false                  -- Remove automatic highlighting 
 o.completeopt = {'menu', 'menuone', 'noselect'} -- Behaviour of autocomplete window : show menu for autocomplete and select nothing without user input
 o.termguicolors = true
+o.cmdheight = 0
 
 require('packer-plugin')
 require('remap/remaps')
