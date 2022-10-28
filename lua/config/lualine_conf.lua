@@ -1,16 +1,13 @@
 local M = {}
 
-local function NoGitRepo()
-    return "No Repo"
-end
-
 function M.setup()
     require('lualine').setup(
         {
             options = {
+                theme = "catppuccin",
                 icons_enable = true,
-                component_separators = { left = '', right = ''},
-                section_separators = {left = '', right = ''},
+                component_separators = { left = '', right = ''},
+                section_separators = {left = '', right = ''},
                 disabled_filetypes = {
                     statusline = {},
                     winbar = {}
