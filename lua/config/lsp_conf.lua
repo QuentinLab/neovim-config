@@ -31,7 +31,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- this part is telling Neovim to use the lsp server
-local servers = {'pyright','clangd'}
+local servers = {'pyright','clangd','tsserver','angularls','html'}
 
 function M.setup()
 
