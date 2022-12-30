@@ -6,6 +6,7 @@ local o = vim.opt
 
 o.clipboard = 'unnamedplus'         -- Share clipboard with system
 o.relativenumber = true             -- Relative line numbers in file
+o.linebreak = true                  -- Word wrapping
 o.number = true                     -- Current line has line number
 o.autoindent = true                 -- Auto-indentation when pressing return
 o.smartindent = true                -- Automatic indentation associated with prog language (e.g. after {})
