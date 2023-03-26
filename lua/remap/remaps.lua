@@ -13,6 +13,8 @@ set("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", o
 set("n", "<leader>fg", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
 set("n", "<leader>fb", "<cmd>lua require'telescope.builtin'.buffers()<cr>", opts)
 set("n", "<leader>fh", "<cmd>lua require'telescope.builtin'.help_tags()<cr>", opts)
+set("n", "<leader>fd", "<cmd>lua require'telescope.builtin'.diagnostics()<cr>", opts)
+
 set("n", "<F2>","<cmd>lua require'nvim-tree.api'.tree.toggle()<cr>",opts)
 set("n", "<leader>mm","<cmd>Mason<cr>", opts)
 

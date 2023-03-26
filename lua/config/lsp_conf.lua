@@ -27,6 +27,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
     vim.keymap.set('n', '<space>fa', vim.lsp.buf.code_action,opts)
+    vim.keymap.set('n', '<space>df', vim.lsp.buf.hover,opts)
 
 end
 
