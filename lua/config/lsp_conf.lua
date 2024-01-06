@@ -6,10 +6,8 @@ local opts = { noremap=true, silent=true }
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-    
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-    
 
     local bufopts = { noremap=true, silent=true, buffer=bufnr }
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -48,7 +46,7 @@ function M.setup()
     table.insert(runtime_path, 'lua/?.lua')
     table.insert(runtime_path, 'lua/?/init.lua')
 
-    require("lspconfig").sumneko_lua.setup(
+    require("lspconfig").lua_ls.setup(
     {
         on_attach = on_attach,
         settings = {
@@ -63,6 +61,9 @@ function M.setup()
                 runtime = {
                     version = 'LuaJIT',
                     path = runtime_path,
+                },
+                telemetry = {
+                    enable = false,
                 },
             },
         },

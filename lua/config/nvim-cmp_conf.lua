@@ -6,14 +6,14 @@ local luasnip = require('luasnip')
 function M.setup()
     cmp.setup({
 
-        snippet = 
+        snippet =
         {
             expand = function(args)
                 luasnip.lsp_expand(args.body)
             end
         },
 
-        sources = 
+        sources =
         {
             {name = "path"},
             {name = "nvim_lsp"},
@@ -23,16 +23,16 @@ function M.setup()
             {name = "nvim_lua"},
         },
 
-        window = 
+        window =
         {
             documentation = cmp.config.window.bordered()
         },
 
-        formatting = 
+        formatting =
         {
             fields = {'menu', 'abbr', 'kind'},
             format = function(entry, item)
-                local menu_icon = 
+                local menu_icon =
                 {
                     nvim_lsp = 'λ',
                     luasnip = '⋗',
@@ -45,20 +45,16 @@ function M.setup()
                 return item
             end,
         },
-        mapping = 
+        mapping =
         {
             ['<Up>'] = cmp.mapping.select_prev_item(select_opts),
             ['<Down>'] = cmp.mapping.select_next_item(select_opts),
-            
             ['<C-p>'] = cmp.mapping.select_prev_item(select_opts),
             ['<C-n>'] = cmp.mapping.select_next_item(select_opts),
-            
             ['<C-u>'] = cmp.mapping.scroll_docs(-4),
             ['<C-f>'] = cmp.mapping.scroll_docs(4),
-            
             ['<C-e>'] = cmp.mapping.abort(),
             ['<CR>'] = cmp.mapping.confirm({select = true}),
-            
             ['<C-d>'] = cmp.mapping(function(fallback)
                 if luasnip.jumpable(1) then
                     luasnip.jump(1)

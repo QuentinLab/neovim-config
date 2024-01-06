@@ -15,6 +15,7 @@ set("n", "<leader>fb", "<cmd>lua require'telescope.builtin'.buffers()<cr>", opts
 set("n", "<leader>fh", "<cmd>lua require'telescope.builtin'.help_tags()<cr>", opts)
 set("n", "<leader>fd", "<cmd>lua require'telescope.builtin'.diagnostics()<cr>", opts)
 
+set("n", "<leader>hn", "<cmd>Telescope ros node_picker<cr>", opts)
 set("n", "<F2>","<cmd>lua require'nvim-tree.api'.tree.toggle()<cr>",opts)
 set("n", "<leader>mm","<cmd>Mason<cr>", opts)
 
@@ -45,3 +46,4 @@ set("t","<C-h>","<C-\\><C-N><C-w>h", opts)
 set("t","<C-j>","<C-\\><C-N><C-w>j", opts)
 set("t","<C-k>","<C-\\><C-N><C-w>k", opts)
 set("t","<C-l>","<C-\\><C-N><C-w>l", opts)
+set("t","<Esc>","<C-\\><C-n>",opts)
