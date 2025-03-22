@@ -23,7 +23,7 @@ return require('packer').startup(function(use)
 
     -- Fuzzy finder (find file, search, etc..)
     use {
-        'nvim-telescope/telescope.nvim', tag='0.1.0',
+        'nvim-telescope/telescope.nvim', tag='0.1.4',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
@@ -102,6 +102,7 @@ return require('packer').startup(function(use)
         module = { "dap" },
         wants = { "nvim-dap-virtual-text", "nvim-dap-ui", "nvim-dap-python" },
         requires = {
+            "nvim-neotest/nvim-nio",
             "theHamsta/nvim-dap-virtual-text",
             "rcarriga/nvim-dap-ui",
             "mfussenegger/nvim-dap-python",
