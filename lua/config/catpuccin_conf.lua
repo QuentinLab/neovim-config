@@ -6,6 +6,7 @@ function M.setup()
         flavour = "mocha"
     }
     integrations = {
+        lualine = true
     }
     vim.api.nvim_command "colorscheme catppuccin"
 
