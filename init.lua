@@ -23,31 +23,12 @@ o.termguicolors = true
 o.cmdheight = 0
 o.foldenable = false
 
--- LSP setups
-vim.diagnostic.config({virtual_text = true}) -- Enable inline diagnostics from LSP
-
-vim.diagnostic.config({
-    signs = {
-        text = {
-            [vim.diagnostic.severity.ERROR] = "",
-            [vim.diagnostic.severity.WARN] = "",
-            [vim.diagnostic.severity.INFO] = "",
-            [vim.diagnostic.severity.HINT] = "",
-        },
-        linehl = {
-                [vim.diagnostic.severity.ERROR] = "ErrorMsg",
-                [vim.diagnostic.severity.WARN] = "WarningMsg",
-                [vim.diagnostic.severity.INFO] = "DiagnosticInfo",
-                [vim.diagnostic.severity.HINT] = "DiagnosticHint",
-        },
-        numhl = {
-                [vim.diagnostic.severity.ERROR] = "ErrorMsg",
-                [vim.diagnostic.severity.WARN] = "WarningMsg",
-                [vim.diagnostic.severity.INFO] = "DiagnosticInfo",
-                [vim.diagnostic.severity.HINT] = "DiagnosticHint",
-        },
-    }
-})
 
 require('remap/remaps')
 require('pack')
+
+--local capabilities = require('cmp_nvim_lsp').default_capabilities()
+--require('lspconfig').basedpyright.setup{
+--    capabitities = capabilities
+--}
+

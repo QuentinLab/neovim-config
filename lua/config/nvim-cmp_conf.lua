@@ -13,6 +13,11 @@ function M.setup()
             end
         },
 
+        experimental =
+        {
+            ghost_text = true,
+        },
+
         sources =
         {
             {name = "path"},
@@ -25,6 +30,7 @@ function M.setup()
 
         window =
         {
+            completion = cmp.config.window.bordered(),
             documentation = cmp.config.window.bordered()
         },
 
