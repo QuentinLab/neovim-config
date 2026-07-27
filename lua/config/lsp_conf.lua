@@ -56,7 +56,8 @@ function M.setup()
         always_trigger = true,
         hi_parameter = "LspSignatureActiveParameter",
         close_timeout = 2000,
-        hint_inline = function() return true end
+        hint_inline = function() return true end,
+        hint_prefix = ' ',
     })
 
     -- LSP setups

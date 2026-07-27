@@ -35,5 +35,6 @@ require('config/nvim-treesitter_conf').init()
 require('config/nvim-treesitter_conf').setupTreeSitter()
 require("nvim-tree").setup()
 require("config/nvim-cmp_conf").setup()
+require('config/lsp_conf').setup()
 
 vim.lsp.enable({ 'lua_ls','basedpyright'})
