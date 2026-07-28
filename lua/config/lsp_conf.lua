@@ -33,11 +33,11 @@ end
 local servers = {'pyright','clangd','tsserver','angularls','html'}
 
 
-vim.api.nvim_create_autocmd("LspAttach", {
-    callback = function(args)
-        require('lsp_signature').on_attach({}, args.buf)
-    end,
-})
+--vim.api.nvim_create_autocmd("LspAttach", {
+--    callback = function(args)
+--        require('lsp_signature').on_attach({}, args.buf)
+--    end,
+--})
 
 function M.setup()
 
@@ -54,7 +54,7 @@ function M.setup()
         max_width = 80,
         doc_lines = 10,
         always_trigger = true,
-        hi_parameter = "LspSignatureActiveParameter",
+        --hi_parameter = "LspSignatureActiveParameter",
         close_timeout = 2000,
         hint_inline = function() return true end,
         hint_prefix = ' ',
